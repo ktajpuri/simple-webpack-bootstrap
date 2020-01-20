@@ -9,6 +9,9 @@ module.exports = {
   entry: {
     app: "./src"
   },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
   module: {
     rules: [
       {
@@ -20,13 +23,12 @@ module.exports = {
   },
   devServer: {
     contentBase: ["./public/", "./src"],
-    publicPath: "http://localhost:6060",
     historyApiFallback: true,
     port: 6060
   },
   output: {
     publicPath: "/",
-    path: root("dist/assets"),
+    // path: root("dist/assets"),
     filename: "[name].js"
   }
 };
